@@ -1,12 +1,12 @@
-variable "aws_access_key" {
-  type      = string
-  sensitive = true
-}
+# variable "aws_access_key" {
+#   type      = string
+#   sensitive = true
+# }
 
-variable "aws_secret_key" {
-  type      = string
-  sensitive = true
-}
+# variable "aws_secret_key" {
+#   type      = string
+#   sensitive = true
+# }
 
 variable "ami_id" {
   description = "AMI ID to use for the instance"
