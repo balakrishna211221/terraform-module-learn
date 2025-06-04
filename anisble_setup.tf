@@ -11,6 +11,10 @@ module "ec2_ansible_master" {
   }
     count = var.masterCount
 
+  depends_on = [ module.ec2_ansible_slave ]
+  
+    
+
 }
 
 
