@@ -1,10 +1,7 @@
+resource "aws_vpc" "this" {
+  cidr_block           = var.cidr_block
+  enable_dns_support   = var.enable_dns_support
+  enable_dns_hostnames = var.enable_dns_hostnames
 
-resource "aws_vpc" "vpc" {
-  cidr_block = "${var.cidr_vpc}"
-  enable_dns_support   = true
-  enable_dns_hostnames = true
-  tags = {
-    Environment = "${var.environment_tag}"
-    Name = "${var.environment_tag}_Terraform_VPC"
-  }
+  tags = var.tags
 }
