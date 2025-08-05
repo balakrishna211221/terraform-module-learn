@@ -1,9 +1,7 @@
-/* output "instance_ip_addr" {
-  value = module.my_instance_module.instance_ip_addr
-  description = "The public IP address of the main instance."
-} */
+variable "region" {
+  default = "us-east-1"
+}
 
-output "vpc" {
-  value = module.vpc.vpc
-  description = "The public IP address of the main instance."
+variable "cluster_name" {
+  default = "demo-eks-cluster"
 }
