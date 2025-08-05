@@ -1,6 +1,16 @@
 provider "aws" {
   region = var.region
 }
+terraform {
+  backend "s3" {
+    bucket         = "terraformstate211221"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+     # Optional
+    encrypt        = true
+  }
+}
+
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
